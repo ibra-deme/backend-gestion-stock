@@ -1,9 +1,8 @@
-from home.views import index
-from django.urls import re_path
+
+
 from django.contrib import admin
 from django.urls import path
-from rest_framework_swagger.views import get_swagger_view
-schema_view = get_swagger_view(title='Pastebin API')
+
 from home.views import (
     CategorieListCreateView, CategorieDetailView,
     ClientListCreateView, ClientDetailView,
@@ -12,8 +11,8 @@ from home.views import (
 )
 
 urlpatterns = [
-    re_path(r'^$', schema_view),
-    path('index/', index),
+    
+   
     path('categories/', CategorieListCreateView.as_view(), name='categorie-list'),
     path('categories/<int:pk>/', CategorieDetailView.as_view(), name='categorie-detail'),
     path('clients/', ClientListCreateView.as_view(), name='client-list'),
