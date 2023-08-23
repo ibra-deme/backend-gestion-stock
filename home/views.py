@@ -4,15 +4,15 @@ from rest_framework import generics
 from .models import Categorie, Client, Fournisseur, Produit
 from .serializers import CategorieSerializer, ClientSerializer, FournisseurSerializer, ProduitSerializer
 
-@api_view(['GET'])
-def index(request):
-    courses={
-        'course_name':'python',
-        'learn':['flask','django','tornado'],
-        'course_provider':'scaler'
-    }  
-    print("GET Method")
-    return  Response(courses)
+# @api_view(['GET'])
+# def index(request):
+#     courses={
+#         'course_name':'python',
+#         'learn':['flask','django','tornado'],
+#         'course_provider':'scaler'
+#     }  
+#     print("GET Method")
+#     return  Response(courses)
 class CategorieListCreateView(generics.ListCreateAPIView):
     queryset = Categorie.objects.all()
     serializer_class = CategorieSerializer
