@@ -1,7 +1,6 @@
 
 
 {
-    "version": 2,
     "builds": [
       {
         "src": "gestion_stock/wsgi.py",
