@@ -15,4 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'gestion_stock.settings')
 
 application = get_asgi_application()
 
-app = application
+
