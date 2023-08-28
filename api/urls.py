@@ -13,7 +13,7 @@ from home.views import (
 urlpatterns = [
     
    
-    path('categories/', CategorieListCreateView.as_view(), name='categorie-list'),
+    path('', CategorieListCreateView.as_view(), name='categorie-list'),
     path('categories/<int:pk>/', CategorieDetailView.as_view(), name='categorie-detail'),
     path('clients/', ClientListCreateView.as_view(), name='client-list'),
     path('clients/<int:pk>/', ClientDetailView.as_view(), name='client-detail'),
